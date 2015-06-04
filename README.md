@@ -10,4 +10,4 @@ Start environment :
 
     $ docker-machine create --driver virtualbox flaskpoc
     $ source activate
-    $ docker-compose up
+    $ docker-compose up -d
