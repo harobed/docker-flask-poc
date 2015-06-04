@@ -1,0 +1,7 @@
+webapp:
+  build: .
+  command: flaskpoc
+  ports:
+    - "5000:5000"
+  volumes:
+    - .:/opt/app/
