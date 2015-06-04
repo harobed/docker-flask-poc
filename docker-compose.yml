@@ -1,7 +1,14 @@
 webapp:
   build: .
-  command: flaskpoc
+  command: flaskpoc runserver -h 0.0.0.0
   ports:
     - "5000:5000"
   volumes:
     - .:/opt/app/
+
+nginx:
+  build: nginx/
+  ports:
+    - "80:80"
+  links:
+    - webapp

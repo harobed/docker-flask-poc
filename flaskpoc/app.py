@@ -1,4 +1,6 @@
+from flask.ext.script import Manager
 from flask import Flask
+
 app = Flask(__name__)
 
 
@@ -6,9 +8,11 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello World!'
 
+manager = Manager(app)
+
 
 def main():
-    app.run()
+    manager.run()
 
 if __name__ == '__main__':
     main()
